@@ -1,0 +1,9 @@
+{
+  "name": "trivia-game",
+  "version": "1.0.0",
+  "description": "A Trivia Game that uses Open trivia DB Api",
+  "main": "index.js",
+  "repository": "https://github.com/mazaherm/trivia-game.git",
+  "author": "Mazaher Muraj <mmuraj.313@gmail.com>",
+  "license": "MIT"
+}
