@@ -1,2 +1,5 @@
-import '../styles/main.scss'
-console.log('It works')
+import { selectDifficulty } from './selectDifficulty/selectDifficulty'
+
+// TEMP - all functions are called here
+
+selectDifficulty()
