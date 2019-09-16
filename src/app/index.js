@@ -1,18 +1,5 @@
-import axios from 'axios'
+import { selectDifficulty } from './selectDifficulty/selectDifficulty'
 
-let difficulty = 'easy'
+// TEMP - all functions are called here
 
-const btn = document.getElementById('btn')
-
-btn.addEventListener('click', () => {
-  axios.get(`https://opentdb.com/api.php?amount=1&difficulty=${difficulty}`)
-    .then(response => {
-    console.log(response.data.results[0])
-  })
-    .catch(error => {
-    console.log(error)
-  })
-})
-
-
-
+selectDifficulty()
