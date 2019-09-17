@@ -1,4 +1,4 @@
-import { selectDifficulty } from './selectDifficulty/selectDifficulty'
+import { selectDifficulty } from './selectDifficulty'
 
 // TEMP - all functions are called here
 
