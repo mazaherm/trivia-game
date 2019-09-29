@@ -1,5 +1,7 @@
-import { selectDifficulty } from './selectDifficulty'
+import { getQuestion } from './components/renderQuestion'
 
-// TEMP - all functions are called here
+const App = () => {
+  getQuestion()
+}
 
-selectDifficulty()
+App()

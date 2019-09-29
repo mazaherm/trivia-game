@@ -1,9 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
+require("babel-polyfill")
 
 module.exports = {
-  entry: __dirname + '/src/app/index.js',
+  entry: ['babel-polyfill', __dirname + '/src/app/index.js'],
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js',
