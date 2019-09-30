@@ -1,7 +1,9 @@
-import { getQuestion } from './components/renderQuestion'
+import { startGame } from './components/startGame'
+
+import '../styles/main.scss'
 
 const App = () => {
-  getQuestion()
+  startGame()
 }
 
 App()

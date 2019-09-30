@@ -1,1 +1,0 @@
-export { getQuestion } from './renderQuestion'
