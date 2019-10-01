@@ -1,4 +1,4 @@
-import { startGame } from './components/startGame'
+import { startGame } from './pages/startGame'
 
 import '../styles/main.scss'
 
