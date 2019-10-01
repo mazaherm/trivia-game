@@ -1,7 +1,7 @@
-import { callAPIData } from '../../services/callAPIData'
+import { callAPIData } from '@services/callAPIData'
 
-import { createElement } from '../../helpers/createElement'
-import { shuffle } from '../../helpers/shuffle'
+import { createElement } from '@helpers/createElement'
+import { shuffle } from '@helpers/shuffle'
 
 const startGameBtn = document.getElementById('startGame')
 const questionRoot = document.getElementById('question')

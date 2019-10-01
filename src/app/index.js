@@ -1,6 +1,6 @@
-import { startGame } from './pages/startGame'
+import { startGame } from '@pages/startGame'
 
-import '../styles/main.scss'
+import '@styles/main.scss'
 
 const App = () => {
   startGame()
