@@ -7,6 +7,9 @@ const startGameBtn = document.getElementById('startGame')
 const questionRoot = document.getElementById('question')
 const choicesRoot = document.getElementById('choices')
 const nextQuestionBtn = document.getElementById('nextQuestion')
+const displayScore = document.getElementById('score')
+
+let score = 0
 
 export const renderQuestion = async () => {
   const { question, incorrectAnswers, correctAnswer } = await callAPIData()
@@ -44,9 +47,8 @@ export const renderQuestion = async () => {
   
   nextQuestionBtn.onclick = () => {
     if (correctChoice.checked && correctChoice.value == correctAnswer) {
-      console.log('yes')
-    } else {
-      console.log('no')
+      score += 1
+      displayScore.innerHTML = score
     }
     renderQuestion()
   }
