@@ -1,12 +1,14 @@
 import { callAPIData } from '../../services/callAPIData'
+
 import { createElement } from '../../helpers/createElement'
 import { shuffle } from '../../helpers/shuffle'
 
 const startGameBtn = document.getElementById('startGame')
 const questionRoot = document.getElementById('question')
 const choicesRoot = document.getElementById('choices')
+const nextQuestionBtn = document.getElementById('nextQuestion')
 
-const renderQuestion = async () => {
+export const renderQuestion = async () => {
   const { question, incorrectAnswers, correctAnswer } = await callAPIData()
 
   /**
@@ -29,13 +31,29 @@ const renderQuestion = async () => {
   let shuffledChoicesObj = {...choicesTemplate}
   let output = Object.entries(shuffledChoicesObj).map(([key, value]) => ({key, value}))
 
-  let tempElement = output.map(item => `<input name='choice' type='radio'>${item.value} <br/>`).join('')
+  let tempElement = output.map(item => `<input name='choice' type='radio' value='${item.value}' id='${item.value.replace(/[^A-Z0-9]+/ig, "_")}'>${item.value} <br/>`).join('')
 
   createElement(tempElement, choicesRoot)
+  
+  /**
+   * Select Answer
+   * correctAnswer is the same as the id of the radio input
+   */
+  const correctChoice = document.getElementById(correctAnswer.replace(/[^A-Z0-9]+/ig, "_"))
+  console.log(correctAnswer, '<-- ANSWER')
+  
+  nextQuestionBtn.onclick = () => {
+    if (correctChoice.checked && correctChoice.value == correctAnswer) {
+      console.log('yes')
+    } else {
+      console.log('no')
+    }
+    renderQuestion()
+  }
 }
 
-
-export const getQuestion = () => startGameBtn.onclick = () => {
+export const startGame = () => startGameBtn.onclick = () => {
   renderQuestion()
-  startGameBtn.innerText = 'Next Question'
+  nextQuestionBtn.style.display = 'block'
+  startGameBtn.style.display = 'none'
 }
