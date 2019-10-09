@@ -6,6 +6,7 @@
         "@pages": "./src/app/pages",
         "@helpers": "./src/app/helpers",
         "@services": "./src/app/services",
+        "@components": "./src/app/components",
         "@styles": "./src/styles"
       }
     }]

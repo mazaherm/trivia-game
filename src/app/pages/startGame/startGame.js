@@ -1,4 +1,5 @@
 import { callAPIData } from '@services/callAPIData'
+import { countdown } from '@components/countDown'
 
 import { createElement } from '@helpers/createElement'
 import { shuffle } from '@helpers/shuffle'
@@ -58,4 +59,5 @@ export const startGame = () => startGameBtn.onclick = () => {
   renderQuestion()
   nextQuestionBtn.style.display = 'block'
   startGameBtn.style.display = 'none'
+  countDown()
 }
