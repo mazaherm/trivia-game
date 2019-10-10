@@ -1,3 +1,13 @@
-#nextQuestion {
-  display: none;
+@import './buttons.scss';
+@import './score.scss';
+@import './heading.scss';
+@import './body.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
+
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.wrapper {
+  margin: auto 10%;
 }
