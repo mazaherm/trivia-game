@@ -1,0 +1,11 @@
+@import './mixins.scss';
+
+#nextQuestion {
+  display: none;
+  @include buttonStyles;
+}
+
+#startGame{
+  display: flex;
+  @include buttonStyles;
+}

@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  #question,
+  #choices {
+    margin: 10px 0;
+  }
+}
